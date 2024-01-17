@@ -64,3 +64,111 @@ body {
   background-color: #09071D;
   color: #F9F8F8;
 }
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #F9F8F8;
+  color: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+}
+
+.footerLogo {
+  height: 2.5em;
+  will-change: filter;
+  transition: filter 300ms;
+  fill: black;
+  stroke: black;
+}
+
+.footer__socials {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 30%;
+}
+
+.footerIcon {
+  width: max-content; 
+  will-change: filter;
+}
+
+.footerSocials {
+  display: flex;
+  align-items: center;
+  max-width: 16%;
+  padding: 0 2.5px; /* create a gap of 50px between the children */
+}
+
+.footerContacts {
+  display: block;
+  text-align: left;
+}
+
+.footerText {
+  font-size: 0.8em;
+  color: #1F1E32;
+  font-weight: bold;
+}
+
+.footer__Links {
+    display: grid; /* use CSS Grid */
+    grid-template-columns: 1fr 1fr 1fr; /* create 3 columns of equal width */
+    justify-items: left; /* center items horizontally */
+    align-items: center; /* center items vertically */
+    gap: 20px; /* create a gap between the grid items */
+    max-width: 30%;
+}
+
+.footerButton{
+  color: #1F1E32;
+  border: none;
+  border-radius: 15px;
+  padding: 0.5em 1em;
+  font-size: 0.9em;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+@font-face {
+  font-family: 'Neue-Metana';
+  src: url('../src/assets/fonts/NeueMetana-Bold.otf') format('opentype');
+  font-style: bold;
+}
+
+@font-face {
+  font-family: 'Neue-Metana';
+  src: url("../src/assets/fonts/NeueMetana-Regular.otf") format('opentype');   
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Neutral-Face';
+  src: url("../src/assets/fonts/NeutralFace-Bold.otf") format('opentype');   
+  font-style: bold;
+}
+
+@font-face {
+  font-family: 'Neutral-Face';
+  src: url("../src/assets/fonts/NeutralFace.otf") format('opentype');   
+  font-style: normal;
+}
+
+.leftDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.heroText {
+  font-family: 'Neue-Metana',  sans-serif;
+  align-self: flex-start; 
+  text-align: left;
+  font-weight: bold;
+  font-style: normal;
+  padding: 10px 0px;
+  margin: 0px;
+}

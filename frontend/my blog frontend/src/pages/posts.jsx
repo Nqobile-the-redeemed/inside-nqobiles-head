@@ -1,7 +1,7 @@
 export default function Posts() {
     return (
-        <H1>
+        <h1>
             Posts
-        </H1>
+        </h1>
     )
 }
