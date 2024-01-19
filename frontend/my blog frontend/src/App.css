@@ -1,8 +1,82 @@
+@font-face {
+  font-family: 'Neue-Metana';
+  src: url('../src/assets/fonts/NeueMetana-Bold.otf') format('opentype');
+  font-style: normal;
+  font-weight:bold;
+}
+
+@font-face {
+  font-family: 'Neue-Metana';
+  src: url("../src/assets/fonts/NeueMetana-Regular.otf") format('opentype');   
+  font-style: normal;
+  font-weight:normal;
+}
+
+@font-face {
+  font-family: 'Neutral-Face';
+  src: url("../src/assets/fonts/NeutralFace-Bold.otf") format('opentype');   
+  font-style: normal;
+  font-weight:bold;
+}
+
+@font-face {
+  font-family: 'Neutral-Face';
+  src: url("../src/assets/fonts/NeutralFace.otf") format('opentype');   
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Space-Grotesk';
+  src: url("../src/assets/fonts/SpaceGrotesk-Bold.ttf") format('truetype');
+  font-style: normal;
+  font-weight:bold;
+}
+
+@font-face {
+  font-family: 'Space-Grotesk';
+  src: url("../src/assets/fonts/SpaceGrotesk-Regular.ttf") format('truetype');
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Space-Grotesk';
+  src: url("../src/assets/fonts/SpaceGrotesk-Medium.ttf") format('truetype');
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Space-Grotesk';
+  src: url("../src/assets/fonts/SpaceGrotesk-SemiBold.ttf") format('truetype');
+  font-style: normal;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Space-Grotesk';
+  src: url("../src/assets/fonts/SpaceGrotesk-Light.ttf") format('truetype');
+  font-style: normal;
+  font-weight: 300;
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+}
+
+:root{
+  --primary-black: #000000;
+  --primary-ivory: #F9F8F8;
+  --primary-scarlet: #FF2400;
+  --secondary-emrald: #00CC66;
+  --secondary-majorelle: #623CEA;
+  --secondary-raspberry: #DB2955;
+  --secondary-naples-yellow: #F1DB4B;
+  --secondary-perrywinkle: #DAC4F7;
 }
 
 .currentLogo {
@@ -14,8 +88,8 @@
 }
 
 body {
-  background-color: #0D1821;
-  padding: 50px 50px;
+  background-color: var(--primary-black);
+  padding: 25px 25px;
 }
 
 .nav-bar {
@@ -132,29 +206,7 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
-@font-face {
-  font-family: 'Neue-Metana';
-  src: url('../src/assets/fonts/NeueMetana-Bold.otf') format('opentype');
-  font-style: bold;
-}
 
-@font-face {
-  font-family: 'Neue-Metana';
-  src: url("../src/assets/fonts/NeueMetana-Regular.otf") format('opentype');   
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Neutral-Face';
-  src: url("../src/assets/fonts/NeutralFace-Bold.otf") format('opentype');   
-  font-style: bold;
-}
-
-@font-face {
-  font-family: 'Neutral-Face';
-  src: url("../src/assets/fonts/NeutralFace.otf") format('opentype');   
-  font-style: normal;
-}
 
 .leftDiv {
   display: flex;

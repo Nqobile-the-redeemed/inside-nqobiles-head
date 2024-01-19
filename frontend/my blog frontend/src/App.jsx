@@ -10,6 +10,7 @@ import Projects from './pages/portfolio.jsx'
 import Resume from './pages/resume.jsx'
 import About from './pages/about.jsx'
 import Portfolio from './pages/portfolio.jsx'
+import Services from './pages/services.jsx'
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
         <Route path="/posts" element={<Posts />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/resume" element={<Resume />} />
+        <Route path="/services" element={<Services />} />
       </Routes>
     <Footer />
     </>

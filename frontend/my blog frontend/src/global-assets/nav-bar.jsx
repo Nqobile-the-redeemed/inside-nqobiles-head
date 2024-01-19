@@ -23,7 +23,8 @@ export default function NavBar() {
             <Link className='headerButton' to="/resume">Resume</Link>
             <Link className='headerButton' to="/about">About</Link>
             <Link className='headerButton' to="/posts">Posts</Link>
-            <Link className='headerButton' to="/contact">Contact</Link>
+            <Link className='headerButton' to="/services">Services</Link>
+            <Link className='headerButton contactButton' to="/contact">Contact</Link>
         </div>
         </div>
     );
