@@ -6,9 +6,10 @@ import N_1 from '../assets/logo variants/N_1.svg';
 import N_2 from '../assets/logo variants/N_2.svg';
 import N_3 from '../assets/logo variants/N_3.svg';
 import N_4 from '../assets/logo variants/N_4.svg';
+import ContactButton from './contact-button';
 
 
-export default function NavBar() {
+export default function NavBar({ getColorSwatch }) {
     return (
         <div className="nav-bar">
         <div className="nav-bar__logo">
@@ -24,7 +25,8 @@ export default function NavBar() {
             <Link className='headerButton' to="/about">About</Link>
             <Link className='headerButton' to="/posts">Posts</Link>
             <Link className='headerButton' to="/services">Services</Link>
-            <Link className='headerButton contactButton' to="/contact">Contact</Link>
+            {/* <Link className='headerButton contactButton' to="/contact">Contact</Link> */}
+            <ContactButton getColorSwatch={getColorSwatch}/>
         </div>
         </div>
     );

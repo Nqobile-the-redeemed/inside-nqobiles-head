@@ -14,9 +14,38 @@ import Services from './pages/services.jsx'
 
 function App() {
 
+  let SplashOfColor = [
+    {
+      backgroundColor: '#00CC66',
+      textColor: 'black'
+    },
+    {
+      backgroundColor: '#623CEA',
+      textColor: '#white'
+    },
+    {
+      backgroundColor: '#DB2955',
+      textColor: 'white'
+    },
+    {
+      backgroundColor: '#F1DB4B',
+      textColor: 'black'
+    },
+    {
+      backgroundColor: '#DAC4F7',
+      textColor: '#6E1DD7'
+    },
+  ]
+
+  function getColorSwatch() {
+    const randomPicker = Math.floor(Math.random() * SplashOfColor.length)
+    return SplashOfColor[randomPicker]
+  }
+
+
   return (
     <>
-    <NavBar />
+    <NavBar getColorSwatch={getColorSwatch} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<Contact />} />

@@ -77,15 +77,13 @@
   --secondary-raspberry: #DB2955;
   --secondary-naples-yellow: #F1DB4B;
   --secondary-perrywinkle: #DAC4F7;
-  --tertiary-light-black: #
+  --tertiary-lighter-backdrop:  rgba(255, 255, 255, 0.10);
+  --button-font: "Neutral-Face", Arial, sans-serif;
+  --tiny-font: "Space-Grotesk", Times, serif;
 }
 
 .currentLogo {
-  height: 2.5em;
-  will-change: filter;
-  transition: filter 300ms;
-  fill: black;
-  stroke: black;
+  height: 2em;
 }
 
 body {
@@ -102,6 +100,9 @@ body {
   border-width: 1px;
   border-style: solid;
   color: var(--primary-ivory);
+  font-family: var(--button-font);
+  font-size: 0.75em;
+  font-weight: bold;
 }
 
 #root {
@@ -116,7 +117,8 @@ body {
   padding: 1em;
   justify-content: space-between;
   align-items: center;
-  width: 50%;
+  gap: 10px;
+  /* width: 50%; */
 }
 
 .headerButton {
@@ -148,7 +150,20 @@ body {
 }
 
 .contactButton{
-  background-color: ;
+  background-color: var(--tertiary-lighter-backdrop);
+  color: var(--primary-ivory);
+  border-color: var(--primary-black);
+  border-style: solid;
+  border-width: 0.5px;
+  border-radius: 0%;
+  outline: none;
+}
+
+.contactButton:hover {
+  background-color: var(--primary-ivory);
+  color: var(--primary-black);
+  border-radius: 0%;
+  outline: none;
 }
 
 .footer {
@@ -158,15 +173,14 @@ body {
   padding: 1rem;
   background-color: #F9F8F8;
   color: rgba(255, 255, 255, 0.05);
-  border-radius: 15px;
+  border-radius: 0%;
+  font-family: var(--tiny-font);
+  font-size: 1em;
+  font-weight: bold;
 }
 
 .footerLogo {
-  height: 2.5em;
-  will-change: filter;
-  transition: filter 300ms;
-  fill: black;
-  stroke: black;
+  height: 2em;
 }
 
 .footer__socials {
