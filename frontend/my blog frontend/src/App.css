@@ -250,3 +250,17 @@ body {
   padding: 10px 0px;
   margin: 0px;
 }
+
+.heroSection {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+}
+
+.newEpisodeContainer {
+  flex: 0 0 70%;
+}
+
+.profileHeadshot {
+  flex: 1;
+}
