@@ -8,7 +8,7 @@ return (
                 Title
             </p>
             <div className="tagContainer">
-                <Tag>
+                <Tag /> <Tag /> <Tag />
             </div>
         </div>
     </button>
