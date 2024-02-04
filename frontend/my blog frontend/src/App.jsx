@@ -37,6 +37,7 @@ function App() {
     },
   ]
 
+
   function getColorSwatch() {
     const randomPicker = Math.floor(Math.random() * SplashOfColor.length)
     return SplashOfColor[randomPicker]
