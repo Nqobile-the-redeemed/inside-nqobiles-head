@@ -1,8 +1,8 @@
-export default function Tag () {
+export default function Tag ({name, index}) {
     return (
-        <div className="tagBody">
+        <div className="tagBody" index = {index}>
             <p className="tagText">
-                tag text
+                {name}
             </p>
         </div>
     )

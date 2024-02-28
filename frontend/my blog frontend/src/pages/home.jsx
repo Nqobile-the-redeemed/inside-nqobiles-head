@@ -10,7 +10,8 @@ export default function Home() {
           tags: ['monkey', 'chimp', 'film-Review'],
           description: 'This is a description of the post.',
           summary: 'This is a summary of the post.',
-          coverImage: 'frontend/my blog frontend/src/assets/post images/cover1.jpg'
+          coverImage: 'https://source.unsplash.com/photo-of-train-rail-tunnel-13MzGKuJYSw',
+          refHold: ""
         },
         {
           title: 'End of Evangelion',
@@ -18,7 +19,8 @@ export default function Home() {
           tags: ['japan', 'anime', 'mecha'],
           description: 'This is a description of the post.',
           summary: 'This is a summary of the post.',
-          coverImage: 'frontend/my blog frontend/src/assets/post images/cover2.jpg'
+          coverImage: 'https://source.unsplash.com/red-staircase-bar-handle-OiERUvVrioU',
+          refHold: ""
         },
         {
           title: 'Rise of the new Colosus',
@@ -26,7 +28,9 @@ export default function Home() {
           tags: ['fantasy', 'anime', 'manga', 'fururistic'],
           description: 'This is a description of the post.',
           summary: 'This is a summary of the post.',
-          coverImage: 'frontend/my blog frontend/src/assets/post images/cover3.jpg'
+          coverImage: 'https://source.unsplash.com/a-view-of-a-city-with-tall-buildings-xU6gtfiLAak',
+          refHold: ""
+
         },
         {
           title: 'The tales of the hungry Dawn',
@@ -34,7 +38,8 @@ export default function Home() {
           tags: ['space opera', 'war', 'pirates', 'film'],
           description: 'This is a description of the post.',
           summary: 'This is a summary of the post.',
-          coverImage: 'frontend/my blog frontend/src/assets/post images/cover4.jpg'
+          coverImage: 'https://source.unsplash.com/high-rise-buildings-city-scape-photography-wpU4veNGnHg',
+          refHold: ""
         },
         {
           title: 'Arichitechts of a brave new world',
@@ -42,7 +47,8 @@ export default function Home() {
           tags: ['archeology', 'sci-fi', 'space-travel' , 'manga'],
           description: 'This is a description of the post.',
           summary: 'This is a summary of the post.',
-          coverImage: 'frontend/my blog frontend/src/assets/post images/cover5.jpg'
+          coverImage: 'https://source.unsplash.com/a-view-of-a-city-with-tall-buildings-and-a-body-of-water-3j4UXcPxwAQ',
+          refHold: ""
         },
         {
           title: 'Rise of the planet of the Apes',
@@ -50,7 +56,8 @@ export default function Home() {
           tags: ['monkey', 'chimp', 'film-Review'],
           description: 'This is a description of the post.',
           summary: 'This is a summary of the post.',
-          coverImage: 'frontend/my blog frontend/src/assets/post images/cover6.jpg'
+          coverImage: 'https://source.unsplash.com/brown-building-near-intersection-W_MUqtuHwyY',
+          refHold: ""
         }
       ]
 
@@ -73,7 +80,7 @@ export default function Home() {
       }
 
       let cardset = latestPosts.map((card, index) => {
-                  return <PostCard key={index} data={card} className={refHold}/>
+                  return <PostCard key={index} data={card} className={card.refHold} coverImage={card.coverImage}/>
                 })
 
 
