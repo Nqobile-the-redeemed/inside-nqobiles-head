@@ -291,6 +291,31 @@ body {
   grid-row: 3 / 4;
 }
 
-.postCard {
-  background-ovelay: var(--primary-black);
+.postCardButton {
+  position: relative;
+  width: 100%; /* Make sure button fills parent container */
+  height: 100%; /* Make sure button fills parent container */
+  border: none;
+  padding: 0; /* Remove default padding */
+}
+
+.overlay {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(6, 6, 6, 0.5); /* Adjust the color and opacity here */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.postCardTitle {
+  color: white; /* Adjust text color */
+  margin: 0; /* Remove default margin */
+}
+
+.tagContainer {
+  margin-top: 10px; /* Adjust spacing */
 }

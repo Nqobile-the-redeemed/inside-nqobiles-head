@@ -9,8 +9,8 @@ export default function PostCard ({data, className, tags, title, description, su
     };
 
     return (
-        <button className={`postCardButton ${className}`} style = {style}>
-            <div>
+        <button className={`postCardButton ${className}`} style={style}>
+            <div className = "overlay">
                 <p className="postCardTitle">
                     {data.title}
                 </p>
