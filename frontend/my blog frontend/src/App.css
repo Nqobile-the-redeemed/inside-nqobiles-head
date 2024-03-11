@@ -265,6 +265,7 @@ body {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   gap: 5px;
+  min-height: 90vh;
 }
 
 .profileHeadshot {
@@ -307,15 +308,55 @@ body {
   background-color: rgba(6, 6, 6, 0.5); /* Adjust the color and opacity here */
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-end; /* Aligns items to the start of the flex container. In this case, to the left */
+  align-items: flex-start; /* Pushes items to the end of the container. In this case, to the bottom */
 }
 
 .postCardTitle {
-  color: white; /* Adjust text color */
-  margin: 0; /* Remove default margin */
+  color: var(--primary-ivory); /* Adjust text color */
+  margin: 20px; /* Remove default margin */
+  font-family: "Neutral-Face";
+  font-size: 1.25em;
+  font-weight: bold;
+  text-align: left;
+  word-wrap: break-word;
 }
 
+
 .tagContainer {
-  margin-top: 10px; /* Adjust spacing */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; 
+  gap: 10px;
+  margin: 0px 20px 20px 20px;
+}
+
+.tagBody {
+  background-color: var(--primary-ivory);
+  color: var(--primary-black);
+  padding: 0px 10px;
+  font-family: "Space-Grotesk";
+  font-size: 0.75em;
+  font-weight: bold;
+  text-transform: uppercase; 
+}
+
+.heroImage {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.nameText {
+  color: var(--primary-ivory);
+  font-family: "Neutral-Face";
+  font-size: 1.25em;
+  font-weight: bold;
+  text-align: left;
+  word-wrap: break-word;
+}
+
+.jobText {
+  color: var(--primary-ivory);
+  font-family: "Space-Grotesk";
 }

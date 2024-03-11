@@ -89,11 +89,14 @@ export default function Home() {
            <div className='heroSection'>
             <div className='newEpisodeContainer'>
                 {cardset}
-                <button onClick={truthTeller}>test your shit</button>
-                <h4>new episodes come here</h4>
+                {/* <button onClick={truthTeller}>test your shit</button>
+                <h4>new episodes come here</h4> */}
             </div>
             <div className='profileHeadshot'>
-                <h4>my face comes here</h4>
+                <p className='nameText'>Nqobile blessing madziba</p>
+                <p className='jobText'>UX/UI designer</p>
+                <p className='jobText'>Full Stack Web Developer</p>
+                <img src ={headshotDemo} className='heroImage'/>
             </div>
            </div>
         </div>
