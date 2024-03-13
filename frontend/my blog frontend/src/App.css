@@ -255,7 +255,6 @@ body {
   display: flex;
   flex-direction: row;
   gap: 25px;
-  margin: 50px auto;
   width: 100%;
 }
 
@@ -270,6 +269,7 @@ body {
 
 .profileHeadshot {
   flex: 1;
+  max-width: 30%;
 }
 
 .alpha {
@@ -354,9 +354,93 @@ body {
   font-weight: bold;
   text-align: left;
   word-wrap: break-word;
+  margin: 0px 0px 20px 0px;
 }
 
 .jobText {
   color: var(--primary-ivory);
+  font-family: "Neue-Metana";
+  font-size: 2.1em;
+  font-weight: bold;
+  text-align: left;
+  max-width: 100%;
+  margin: 0px 0px 15px 0px;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--primary-ivory);
+  color: var(--primary-ivory);
+  background-color: var(--primary-ivory);
+  height: 1px;
+  width: 100%;
+  margin: 20px 0px;
+  opacity: 0.5;
+}
+
+.homePage {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 50px;
+  margin: 50px auto;
+  width: 100%;
+}
+
+.aboutSection {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 5px;
+}
+
+.aboutImageHolder {
+  flex: 1;
+  max-width: 100%;
+  background-image: url('https://source.unsplash.com/a-view-of-the-city-of-london-at-dusk-OjfMXewtQK0');
+  background-size: cover; /* This will scale the image to cover the entire div */
+  background-position: center; /* This will center the image in the div */
+}
+
+.aboutSummary {
+  flex: 1;
+  max-width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: flex-start;
+  gap: 20px;
+  border: 1px solid var(--primary-ivory);
+  padding: 5px;
+}
+
+.aboutHeading{
+  color: var(--primary-ivory);
+  font-family: "Neue-Metana";
+  font-size: 1.75em;
+  text-align: left;
+  max-width: 100%;
+  margin: 0px;
+}
+
+.aboutSummaryText {
+  color: var(--primary-ivory);
   font-family: "Space-Grotesk";
+  font-size: 1em;
+  text-align: left;
+  max-width: 100%;
+  margin: 0px;
+}
+
+.blackBackgroundButton {
+  color: var(--primary-black);
+  background-color: var(--primary-ivory);
+  font-family: 'Neutral-Face';
+  font-weight: bold;
+  border: none;
+  padding: 0.5em 1em;
+  font-size: 0.9em;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }

@@ -61,6 +61,36 @@ export default function Home() {
         }
       ]
 
+      let exampleServices = [
+        {
+          imageHighlight: 'https://source.unsplash.com/person-writing-on-white-paper-v9FQR4tbIq8',
+          videoHighlight: '',
+          title: 'UX/UI Design',
+          iconFill: 'black',
+          iconD: "M7 16C7.55 16 8 16.45 8 17C8 18.1 7.1 19 6 19C5.83 19 5.67 18.98 5.5 18.95C5.81 18.4 6 17.74 6 17C6 16.45 6.45 16 7 16ZM18.67 3C18.41 3 18.16 3.1 17.96 3.29L9 12.25L11.75 15L20.71 6.04C21.1 5.65 21.1 5.02 20.71 4.63L19.37 3.29C19.17 3.09 18.92 3 18.67 3V3ZM7 14C5.34 14 4 15.34 4 17C4 18.31 2.84 19 2 19C2.92 20.22 4.49 21 6 21C8.21 21 10 19.21 10 17C10 15.34 8.66 14 7 14Z",
+          description: 'This is a description of the post.',
+          pageLink: 'ux-ui-design'
+        },
+        {
+          imageHighlight: 'https://source.unsplash.com/photo-of-train-rail-tunnel-13MzGKuJYSw',
+          videoHighlight: 'https://www.youtube.com/watch?v=HT4J5ZNf1TE',
+          title: 'Web Development',
+          iconFill: 'black',
+          iconD: "M3 6H21V4H3C1.9 4 1 4.9 1 6V18C1 19.1 1.9 20 3 20H7V18H3V6ZM13 12H9V13.78C8.39 14.33 8 15.11 8 16C8 16.89 8.39 17.67 9 18.22V20H13V18.22C13.61 17.67 14 16.88 14 16C14 15.12 13.61 14.33 13 13.78V12ZM11 17.5C10.17 17.5 9.5 16.83 9.5 16C9.5 15.17 10.17 14.5 11 14.5C11.83 14.5 12.5 15.17 12.5 16C12.5 16.83 11.83 17.5 11 17.5ZM22 8H16C15.5 8 15 8.5 15 9V19C15 19.5 15.5 20 16 20H22C22.5 20 23 19.5 23 19V9C23 8.5 22.5 8 22 8ZM21 18H17V10H21V18Z",
+          description: 'This is a description of the post.',
+          pageLink: 'web-development'
+        },
+        {
+          imageHighlight: 'https://source.unsplash.com/space-gray-iphone-x-on-stand-near-silver-imac-and-apple-magic-keyboard-L0nipfx-Ry4',
+          videoHighlight: 'https://www.youtube.com/watch?v=HT4J5ZNf1TE',
+          title: 'App Development',
+          iconFill: 'black',
+          iconD: "M21 0H3V24H21V0ZM14 22H10V21H14V22ZM19.25 19H4.75V3H19.25V19Z",
+          description: 'This is a description of the post.',
+          pageLink: 'app-development'
+        },
+      ]
+
       let latestPosts = []
       let counter1 = 0
       let counter2 = examplePosts.length - 1
@@ -83,6 +113,9 @@ export default function Home() {
                   return <PostCard key={index} data={card} className={card.refHold} coverImage={card.coverImage}/>
                 })
 
+      let serviceSet = exampleServices.map((service, index) => {
+        return <ServiceCard key={index} data={service} />
+      })
 
     return (
         <div className="homePage">
@@ -94,10 +127,31 @@ export default function Home() {
             </div>
             <div className='profileHeadshot'>
                 <p className='nameText'>Nqobile blessing madziba</p>
-                <p className='jobText'>UX/UI designer</p>
+                <p className='jobText'>UX/UI Designer</p>
+                {/* <hr /> */}
                 <p className='jobText'>Full Stack Web Developer</p>
                 <img src ={headshotDemo} className='heroImage'/>
             </div>
+           </div>
+           <div className='aboutSection'>
+                <div className='aboutSummary'>
+                  <p className='aboutHeading'>About</p>
+                  <p className='aboutSummaryText'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+</p>
+                  <button className='aboutButton blackBackgroundButton'>Read More</button>
+                </div>
+                <div className='aboutImageHolder'>
+                </div>
+           </div>
+           <div className='servicesSection'>
+            <div className='serviceList'>
+                <div className='servicesOverview'>
+                    <p className='servicesHeading'>Services</p>
+                    <p className='servicesSummary'>I offer a range of services that cater to the needs of the modern digital world. From UX/UI design to full stack web development, I have the skills to bring your digital dreams to life.</p>
+                </div>
+                
+            </div>
+            <div className='serviceImageHolder'></div>
            </div>
         </div>
         
