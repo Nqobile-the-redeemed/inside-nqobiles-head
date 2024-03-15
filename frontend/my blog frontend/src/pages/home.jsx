@@ -1,5 +1,6 @@
 import headshotDemo from '../assets/images/headshotDemo.png'
 import PostCard from '../cards/postCard'
+import ServiceCard from '../cards/serviceCard'
 
 export default function Home() {
 
@@ -135,8 +136,8 @@ export default function Home() {
            </div>
            <div className='aboutSection'>
                 <div className='aboutSummary'>
-                  <p className='aboutHeading'>About</p>
-                  <p className='aboutSummaryText'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+                  <p className='aboutHeading sectionHeading'>About</p>
+                  <p className='aboutSummaryText blackBackgroundBody'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
 </p>
                   <button className='aboutButton blackBackgroundButton'>Read More</button>
                 </div>
@@ -146,10 +147,10 @@ export default function Home() {
            <div className='servicesSection'>
             <div className='serviceList'>
                 <div className='servicesOverview'>
-                    <p className='servicesHeading'>Services</p>
-                    <p className='servicesSummary'>I offer a range of services that cater to the needs of the modern digital world. From UX/UI design to full stack web development, I have the skills to bring your digital dreams to life.</p>
+                    <p className='servicesHeading sectionHeading'>Services</p>
+                    <p className='servicesSummary blackBackgroundBody'>I offer a range of services that cater to the needs of the modern digital world. From UX/UI design to full stack web development, I have the skills to bring your digital dreams to life.</p>
                 </div>
-                
+                {serviceSet}
             </div>
             <div className='serviceImageHolder'></div>
            </div>

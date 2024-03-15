@@ -71,7 +71,7 @@
 :root{
   --primary-black: #000000;
   --primary-ivory: #F9F8F8;
-  --primary-scarlet: #FF2400;
+  --primary-scarlet: #B71414;
   --secondary-emrald: #00CC66;
   --secondary-majorelle: #623CEA;
   --secondary-raspberry: #DB2955;
@@ -415,7 +415,7 @@ hr {
   padding: 5px;
 }
 
-.aboutHeading{
+.sectionHeading{
   color: var(--primary-ivory);
   font-family: "Neue-Metana";
   font-size: 1.75em;
@@ -424,7 +424,7 @@ hr {
   margin: 0px;
 }
 
-.aboutSummaryText {
+.blackBackgroundBody {
   color: var(--primary-ivory);
   font-family: "Space-Grotesk";
   font-size: 1em;
@@ -443,4 +443,123 @@ hr {
   font-size: 0.9em;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+}
+
+.servicesSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+}
+
+.servicesOverview{
+  flex: 1;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: flex-start;
+  gap: 20px;
+  border: 1px solid var(--primary-ivory);
+  padding: 5px;
+}
+
+.serviceList {
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+}
+
+.serviceCard{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid var(--primary-ivory);
+  align-items: flex-start;
+  gap: 10px;
+  padding: 5px;
+  background-color: var(--primary-ivory);
+  height: 300px;
+  width: 300px;
+  
+}
+
+.serviceIcon {
+  width: 40px; /* or whatever size you want */
+  height: auto; /* this will maintain the aspect ratio */
+}
+
+.iconPath {
+  fill: var(--primary-black);
+  transform: scale(2.25);
+}
+
+.serviceText {
+  color: var(--primary-black);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  gap: 20px;
+}
+
+.whiteBackgroundH4 {
+  color: var(--primary-scarlet);
+  font-family: "Neutral-Face";
+  font-size: 1.25em;
+  font-weight: bold;
+  text-align: left;
+  max-width: 100%;
+  margin: 0px;
+}
+
+.whiteBackgroundBody{
+  color: var(--primary-black);
+  font-family: "Space-Grotesk";
+  font-size: 1em;
+  text-align: left;
+  max-width: 100%;
+  margin: 0px;
+}
+
+.whiteBackgroundButton {
+  color: var(--primary-scarlet);
+  background-color: var(--primary-ivory);
+  font-family: 'Neutral-Face';
+  font-weight: bold;
+  border: 1px solid var(--primary-scarlet);
+  padding: 0.5em 1em;
+  font-size: 0.9em;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+#wbb{
+  color: var(--primary-scarlet);
+  background-color: var(--primary-ivory);
+  font-family: 'Neutral-Face';
+  font-weight: bold;
+  border: 2px solid var(--primary-scarlet);
+  padding: 0.5em 1em;
+  font-size: 0.9em;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.buttonLink {
+  font-family: 'Neutral-Face';
+  font-weight: bold;
+  color: var(--primary-scarlet);
+}
+
+.serviceImageHolder{
+  flex: 1;
+  max-width: 100%;
+  height: 100px;
+  background-image: url('https://source.unsplash.com/high-rise-buildings-iSZJxklblkw');
+  background-size: cover; /* This will scale the image to cover the entire div */
+  background-position: center; /* This will center the image in the div */
 }
