@@ -449,9 +449,10 @@ hr {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  align-items: center;
+  align-items: stretch;
   gap: 5px;
   width: 100%;
+  height: auto;
 }
 
 .servicesOverview{
@@ -556,10 +557,17 @@ hr {
 }
 
 .serviceImageHolder{
+  display: flex;
+  align-self: stretch;
   flex: 1;
   max-width: 100%;
-  height: 100px;
+  max-height: 100%;
   background-image: url('https://source.unsplash.com/high-rise-buildings-iSZJxklblkw');
   background-size: cover; /* This will scale the image to cover the entire div */
   background-position: center; /* This will center the image in the div */
+  overflow: hidden;
+}
+
+.backgroundVideo {
+  display: none;
 }

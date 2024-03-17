@@ -1,8 +1,21 @@
+import React, { useState } from 'react';
 import headshotDemo from '../assets/images/headshotDemo.png'
 import PostCard from '../cards/postCard'
 import ServiceCard from '../cards/serviceCard'
 
 export default function Home() {
+  
+  const [onHoverImage, setOnHoverImage] = useState('https://source.unsplash.com/high-rise-buildings-iSZJxklblkw');
+  const [onHoverVideo, setOnHoverVideo] = useState('');
+  const [videoStyle, setVideoStyle] = useState({
+    display: 'block'
+  });
+
+  const style = {
+    backgroundImage: `url(${onHoverImage})`,
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover'
+};
 
     let examplePosts = [
         {
@@ -74,7 +87,7 @@ export default function Home() {
         },
         {
           imageHighlight: 'https://source.unsplash.com/photo-of-train-rail-tunnel-13MzGKuJYSw',
-          videoHighlight: 'https://www.youtube.com/watch?v=HT4J5ZNf1TE',
+          videoHighlight: 'https://www.youtube.com/embed/lPXRrxSWwbI?si=Pl8sDd6JSP24UFBI?rel=0&modestbranding=1&autohide=1&mute=1&showinfo=0&controls=0&autoplay=1',
           title: 'Web Development',
           iconFill: 'black',
           iconD: "M3 6H21V4H3C1.9 4 1 4.9 1 6V18C1 19.1 1.9 20 3 20H7V18H3V6ZM13 12H9V13.78C8.39 14.33 8 15.11 8 16C8 16.89 8.39 17.67 9 18.22V20H13V18.22C13.61 17.67 14 16.88 14 16C14 15.12 13.61 14.33 13 13.78V12ZM11 17.5C10.17 17.5 9.5 16.83 9.5 16C9.5 15.17 10.17 14.5 11 14.5C11.83 14.5 12.5 15.17 12.5 16C12.5 16.83 11.83 17.5 11 17.5ZM22 8H16C15.5 8 15 8.5 15 9V19C15 19.5 15.5 20 16 20H22C22.5 20 23 19.5 23 19V9C23 8.5 22.5 8 22 8ZM21 18H17V10H21V18Z",
@@ -83,7 +96,7 @@ export default function Home() {
         },
         {
           imageHighlight: 'https://source.unsplash.com/space-gray-iphone-x-on-stand-near-silver-imac-and-apple-magic-keyboard-L0nipfx-Ry4',
-          videoHighlight: 'https://www.youtube.com/watch?v=HT4J5ZNf1TE',
+          videoHighlight: 'https://www.youtube.com/embed/dKINfl0SnSY?si=IglabvpXyRudcPfN?rel=0&modestbranding=1&autohide=1&mute=1&showinfo=0&controls=0&autoplay=1',
           title: 'App Development',
           iconFill: 'black',
           iconD: "M21 0H3V24H21V0ZM14 22H10V21H14V22ZM19.25 19H4.75V3H19.25V19Z",
@@ -115,8 +128,10 @@ export default function Home() {
                 })
 
       let serviceSet = exampleServices.map((service, index) => {
-        return <ServiceCard key={index} data={service} />
+        return <ServiceCard key={index} data={service} onHoverImage={onHoverImage} setOnHoverImage={setOnHoverImage} onHoverVideo={onHoverVideo} setOnHoverVideo={setOnHoverVideo} videoStyle={videoStyle} setVideoStyle={setVideoStyle}/>
       })
+
+      
 
     return (
         <div className="homePage">
@@ -152,7 +167,19 @@ export default function Home() {
                 </div>
                 {serviceSet}
             </div>
-            <div className='serviceImageHolder'></div>
+            <div className='serviceImageHolder' style={style}>
+              <iframe 
+                width="560" 
+                height="315" 
+                src={onHoverVideo}
+                title="YouTube video player" 
+                style={videoStyle}
+                frameborder="0" 
+                autoplay="1"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+              </iframe>
+            </div>
            </div>
         </div>
         
