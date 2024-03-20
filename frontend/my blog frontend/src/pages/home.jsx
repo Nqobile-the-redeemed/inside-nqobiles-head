@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import headshotDemo from '../assets/images/headshotDemo.png'
 import PostCard from '../cards/postCard'
 import ServiceCard from '../cards/serviceCard'
+import { Link } from 'react-router-dom';
 
 export default function Home() {
   
@@ -105,6 +106,99 @@ export default function Home() {
         },
       ]
 
+      let exampleSkills = [
+        {
+          skill: 'Front End Development',
+          tag: [
+            {
+              skill: 'React',
+              icon: ''
+            },
+            {
+              skill: 'Vite',
+              icon: ''
+            },
+            {
+              skill: 'Javascript',
+              icon: ''
+            },
+            {
+              skill: 'HTML',
+              icon: ''
+            },
+            {
+              skill: 'CSS',
+              icon: ''
+            }
+          ]
+        },
+        {
+          skill: 'Back End Development',
+          tag: [
+            {
+              skill: 'Node JS',
+              icon: ''
+            },
+            {
+              skill: 'Express JS',
+              icon: ''
+            },
+            {
+              skill: 'Mongo DB',
+              icon: ''
+            }
+          ]
+        },
+        {
+          skill: 'UX/UI Design',
+          tag: [
+            {
+              skill: 'Figma',
+              icon: ''
+            },
+            {
+              skill: 'Adobe Creative Suite',
+              icon: ''
+            }
+          ]
+        },
+        {
+          skill: 'Project Managemnt',
+          tag: [
+            {
+              skill: 'Notion',
+              icon: ''
+            },
+            {
+              skill: 'Agile',
+              icon: ''
+            },
+            {
+              skill: 'Scrum',
+              icon: ''
+            }
+          ]
+        },
+        {
+          skill: 'Financial Modeling',
+          tag: [
+            {
+              skill: 'R',
+              icon: ''
+            },
+            {
+              skill: 'Excel',
+              icon: ''
+            },
+            {
+              skill: 'VBA',
+              icon: ''
+            }
+          ]
+        }
+      ];
+      
+
       let latestPosts = []
       let counter1 = 0
       let counter2 = examplePosts.length - 1
@@ -150,10 +244,9 @@ export default function Home() {
             </div>
            </div>
            <div className='aboutSection'>
-                <div className='aboutSummary'>
+                <div className='aboutSummary overViewSection'>
                   <p className='aboutHeading sectionHeading'>About</p>
-                  <p className='aboutSummaryText blackBackgroundBody'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
-</p>
+                  <p className='aboutSummaryText blackBackgroundBody'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
                   <button className='aboutButton blackBackgroundButton'>Read More</button>
                 </div>
                 <div className='aboutImageHolder'>
@@ -161,7 +254,7 @@ export default function Home() {
            </div>
            <div className='servicesSection'>
             <div className='serviceList'>
-                <div className='servicesOverview'>
+                <div className='servicesOverview overViewSection'>
                     <p className='servicesHeading sectionHeading'>Services</p>
                     <p className='servicesSummary blackBackgroundBody'>I offer a range of services that cater to the needs of the modern digital world. From UX/UI design to full stack web development, I have the skills to bring your digital dreams to life.</p>
                 </div>
@@ -179,6 +272,18 @@ export default function Home() {
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                 allowfullscreen>
               </iframe>
+            </div>
+           </div>
+           <div className = "skillsSection">
+            <div className='skillsList'></div>
+            <div className='skillsOverview overViewSection'>
+              <p className='skillsHeading sectionHeading'>Skills</p>
+              <p className='skillsOverviewText blackBackgroundBody'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen boc</p>
+              <button className='skillsButton blackBackgroundButton'>
+                <Link className='blackBackgroundButtonLink'>
+                  Learn More
+                </Link>
+              </button>
             </div>
            </div>
         </div>
