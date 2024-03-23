@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import headshotDemo from '../assets/images/headshotDemo.png'
 import PostCard from '../cards/postCard'
 import ServiceCard from '../cards/serviceCard'
+import SkillCard from '../cards/skillCard'
 import { Link } from 'react-router-dom';
 
 export default function Home() {
@@ -197,7 +198,7 @@ export default function Home() {
           ]
         }
       ];
-      
+       
 
       let latestPosts = []
       let counter1 = 0
@@ -223,6 +224,10 @@ export default function Home() {
 
       let serviceSet = exampleServices.map((service, index) => {
         return <ServiceCard key={index} data={service} onHoverImage={onHoverImage} setOnHoverImage={setOnHoverImage} onHoverVideo={onHoverVideo} setOnHoverVideo={setOnHoverVideo} videoStyle={videoStyle} setVideoStyle={setVideoStyle}/>
+      })
+
+      let skillSet = exampleSkills.map((skill, index) => {
+        return <SkillCard key ={index} data={skill} />
       })
 
       
@@ -275,7 +280,9 @@ export default function Home() {
             </div>
            </div>
            <div className = "skillsSection">
-            <div className='skillsList'></div>
+            <div className='skillsList'>
+              {skillSet}
+            </div>
             <div className='skillsOverview overViewSection'>
               <p className='skillsHeading sectionHeading'>Skills</p>
               <p className='skillsOverviewText blackBackgroundBody'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen boc</p>
