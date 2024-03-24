@@ -3,7 +3,7 @@ import SkillTag from "../global-assets/skillTag"
 export default function SkillCard ({data}){
 
     let skillTagSet = data.tag.map((skill, index) => {
-        <SkillTag data={skill} key={index}/>
+        return <SkillTag data={skill} key={index}/>
     })
 
    
