@@ -313,13 +313,7 @@ body {
 }
 
 .postCardTitle {
-  color: var(--primary-ivory); /* Adjust text color */
-  margin: 20px; /* Remove default margin */
-  font-family: "Neutral-Face";
-  font-size: 1.25em;
-  font-weight: bold;
-  text-align: left;
-  word-wrap: break-word;
+  margin: 20px;
 }
 
 
@@ -574,4 +568,67 @@ hr {
 
 .skillsOverview{
   max-width: 30%;
+  min-width: 30%;
+}
+
+.skill-tag{
+  display: flex;
+  gap: 10px;
+  background-color: var(--secondary-emrald);
+  color: var(--primary-black);
+  padding: 0px 20px;
+  font-family: "Space-Grotesk";
+  font-size: 0.75em;
+  font-weight: bold;
+  text-transform: uppercase; 
+  border: 2px solid var(--secondary-emrald);
+  border-radius: 20px;
+}
+
+.skillTagHolder{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.mediumTitle{
+  color: var(--primary-ivory);
+  font-family: "Neutral-Face";
+  font-size: 1.25em;
+  font-weight: bold;
+  text-align: left;
+  max-width: 100%;
+  word-wrap: break-word;
+}
+
+.SkillTitle{
+  margin: 0px;
+}
+
+.skillCard{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.skillsList{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 5px;
+  gap: 40px;
+  width: 100%;
+}
+
+.skillsSection{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 5px;
+  width: 100%;
+  height: auto;
 }

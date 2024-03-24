@@ -10,7 +10,7 @@ export default function SkillCard ({data}){
 
     return(
         <div className="skillCard">
-            <p>{data.skill}</p>
+            <p className="SkillTitle mediumTitle">{data.skill}</p>
             <div className="skillTagHolder">
                 {skillTagSet}
             </div>

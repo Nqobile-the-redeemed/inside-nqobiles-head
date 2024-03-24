@@ -19,63 +19,161 @@ export default function Home() {
     backgroundSize: 'cover'
 };
 
-    let examplePosts = [
-        {
-          title: 'Tales of the crypt keeper',
-          class: 'omega',
-          tags: ['monkey', 'chimp', 'film-Review'],
-          description: 'This is a description of the post.',
-          summary: 'This is a summary of the post.',
-          coverImage: 'https://source.unsplash.com/photo-of-train-rail-tunnel-13MzGKuJYSw',
-          refHold: ""
-        },
-        {
-          title: 'End of Evangelion',
-          class: 'omega',
-          tags: ['japan', 'anime', 'mecha'],
-          description: 'This is a description of the post.',
-          summary: 'This is a summary of the post.',
-          coverImage: 'https://source.unsplash.com/red-staircase-bar-handle-OiERUvVrioU',
-          refHold: ""
-        },
-        {
-          title: 'Rise of the new Colosus',
-          class: 'omega',
-          tags: ['fantasy', 'anime', 'manga', 'fururistic'],
-          description: 'This is a description of the post.',
-          summary: 'This is a summary of the post.',
-          coverImage: 'https://source.unsplash.com/a-view-of-a-city-with-tall-buildings-xU6gtfiLAak',
-          refHold: ""
 
-        },
-        {
-          title: 'The tales of the hungry Dawn',
-          class: 'omega',
-          tags: ['space opera', 'war', 'pirates', 'film'],
-          description: 'This is a description of the post.',
-          summary: 'This is a summary of the post.',
-          coverImage: 'https://source.unsplash.com/high-rise-buildings-city-scape-photography-wpU4veNGnHg',
-          refHold: ""
-        },
-        {
-          title: 'Arichitechts of a brave new world',
-          class: 'omega',
-          tags: ['archeology', 'sci-fi', 'space-travel' , 'manga'],
-          description: 'This is a description of the post.',
-          summary: 'This is a summary of the post.',
-          coverImage: 'https://source.unsplash.com/a-view-of-a-city-with-tall-buildings-and-a-body-of-water-3j4UXcPxwAQ',
-          refHold: ""
-        },
-        {
-          title: 'Rise of the planet of the Apes',
-          class: 'omega',
-          tags: ['monkey', 'chimp', 'film-Review'],
-          description: 'This is a description of the post.',
-          summary: 'This is a summary of the post.',
-          coverImage: 'https://source.unsplash.com/brown-building-near-intersection-W_MUqtuHwyY',
-          refHold: ""
-        }
-      ]
+let examplePosts = [
+  {
+    title: 'Tales of the crypt keeper',
+    pageLink: 'tales-of-the-crypt-keeper',
+    filter: 'media',
+    tags: ['monkey', 'chimp', 'film-Review'],
+    description: 'This is a description of the post.',
+    summary: 'This is a summary of the post.',
+    coverImage: 'https://source.unsplash.com/photo-of-train-rail-tunnel-13MzGKuJYSw',
+    refHold: "",
+    detailedDescription: 'This is a detailed description of the category.',
+    categoryGallery: [
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/'
+    ]
+  },
+  {
+    title: 'End of Evangelion',
+    pageLink:'end-of-evangelion',
+    tags: ['japan', 'anime', 'mecha'],
+    filter: 'media',
+    description: 'This is a description of the post.',
+    summary: 'This is a summary of the post.',
+    coverImage: 'https://source.unsplash.com/red-staircase-bar-handle-OiERUvVrioU',
+    refHold: "",
+    detailedDescription: 'This is a detailed description of the category.',
+    categoryGallery: [
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/'
+    ]
+  },
+  {
+    title: 'Rise of the new Colosus',
+    tags: ['fantasy', 'anime', 'manga', 'fururistic'],
+    pageLink:'rise-of-the-new-colosus',
+    filter: 'media',
+    description: 'This is a description of the post.',
+    summary: 'This is a summary of the post.',
+    coverImage: 'https://source.unsplash.com/a-view-of-a-city-with-tall-buildings-xU6gtfiLAak',
+    refHold: "",
+    detailedDescription: 'This is a detailed description of the category.',
+    categoryGallery: [
+        'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+        'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+        'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+        'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+        'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+        'https://source.unsplash.com/abstract-architecture-building-business-263402/'
+    ]
+},
+{
+    title: 'The tales of the hungry Dawn',
+    pageLink:'the-tales-of-the-hungry-dawn',
+    tags: ['space opera', 'war', 'pirates', 'film'],
+    filter: 'media',
+    description: 'This is a description of the post.',
+    summary: 'This is a summary of the post.',
+    coverImage: 'https://source.unsplash.com/high-rise-buildings-city-scape-photography-wpU4veNGnHg',
+    refHold: "",
+    detailedDescription: 'This is a detailed description of the category.',
+    categoryGallery: [
+        'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+        'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+        'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+        'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+        'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+        'https://source.unsplash.com/abstract-architecture-building-business-263402/'
+    ]
+},
+{
+    title: 'Arichitechts of a brave new world',
+    tags: ['archeology', 'sci-fi', 'space-travel' , 'manga'],
+    filter: 'media',
+    pageLink: 'architechts-of-a-brave-new-world',
+    description: 'This is a description of the post.',
+    summary: 'This is a summary of the post.',
+    coverImage: 'https://source.unsplash.com/a-view-of-a-city-with-tall-buildings-and-a-body-of-water-3j4UXcPxwAQ',
+    refHold: "",
+    detailedDescription: 'This is a detailed description of the category.',
+    categoryGallery: [
+        'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+        'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+        'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+        'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+        'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+        'https://source.unsplash.com/abstract-architecture-building-business-263402/'
+    ]
+},
+{
+    title: 'Rise of the planet of the Apes',
+    tags: ['monkey', 'chimp', 'film-Review'],
+    filter: 'media',
+    pageLink: 'rise-of-the-planet-of-the-apes',
+    description: 'This is a description of the post.',
+    summary: 'This is a summary of the post.',
+    coverImage: 'https://source.unsplash.com/brown-building-near-intersection-W_MUqtuHwyY',
+    refHold: "",
+    detailedDescription: 'This is a detailed description of the category.',
+    categoryGallery: [
+        'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+        'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+        'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+        'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+        'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+        'https://source.unsplash.com/abstract-architecture-building-business-263402/'
+    ]
+  },
+  {
+    title: 'Mobile Banking App Design',
+    pageLink: 'mobile-banking-app-design',
+    filter: 'design',
+    tags: ['banking', 'mobile', 'open-banking'],
+    description: 'This is a description of the post.',
+    summary: 'This is a summary of the post.',
+    coverImage: 'https://source.unsplash.com/photo-of-train-rail-tunnel-13MzGKuJYSw',
+    refHold: "",
+    detailedDescription: 'This is a detailed description of the category.',
+    categoryGallery: [
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/'
+    ]
+  },
+  {
+    title: 'Mobile Banking App Design',
+    pageLink: 'mobile-banking-app-design',
+    filter: 'design',
+    tags: ['banking', 'mobile', 'open-banking'],
+    description: 'This is a description of the post.',
+    summary: 'This is a summary of the post.',
+    coverImage: 'https://source.unsplash.com/photo-of-train-rail-tunnel-13MzGKuJYSw',
+    refHold: "",
+    detailedDescription: 'This is a detailed description of the category.',
+    categoryGallery: [
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/'
+    ]
+  },
+];
 
       let exampleServices = [
         {
@@ -181,6 +279,23 @@ export default function Home() {
           ]
         },
         {
+          skill: 'Content Management Systems',
+          tag: [
+            {
+              skill: 'Wordpress',
+              icon: ''
+            },
+            {
+              skill: '  Webflow',
+              icon: ''
+            },
+            {
+              skill: 'Wix',
+              icon: ''
+            }
+          ]
+        },
+        {
           skill: 'Financial Modeling',
           tag: [
             {
@@ -198,6 +313,125 @@ export default function Home() {
           ]
         }
       ];
+
+      let exampleCategories = [
+        {
+          name: 'Design Portfolio',
+          tags: [
+            {
+              subject: 'ux/ui',
+              icon: ''
+            },
+            {
+              subject: 'web design',
+              icon: ''
+            },
+            {
+              subject: 'graphic design',
+              icon: ''
+            },
+            {
+              subject: 'branding',
+              icon: ''
+            }
+          ],
+          shortDescription: 'This is a short description of the category.',
+          coverImage: 'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+          categoryLink: 'design-portfolio',
+          categoryFilter: 'design',
+          detailedDescription: 'This is a detailed description of the category.',
+          categoryGallery: [
+            'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+            'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+            'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+            'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+            'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+            'https://source.unsplash.com/abstract-architecture-building-business-263402/'
+          ]
+        },
+        {
+          name: 'Developer Portfolio',
+          tags: [
+            {
+              subject: 'web development',
+              icon: ''
+            },
+            {
+              subject: 'full stack',
+              icon: ''
+            },
+            {
+              subject: 'front end',
+              icon: ''
+            },
+            {
+              subject: 'back end',
+              icon: ''
+            }
+          ],
+          shortDescription: 'This is a short description of the category.',
+          coverImage: 'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+          categoryLink: 'developer-portfolio',
+          categoryFilter: 'development',
+          detailedDescription: 'This is a detailed description of the category.',
+          categoryGallery: [
+            'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+            'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+            'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+            'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+            'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+            'https://source.unsplash.com/abstract-architecture-building-business-263402/'
+          ]
+        },
+        {
+          name: 'Media',
+          tags: [
+            {
+              subject: 'film',
+              icon: ''
+            },
+            {
+              subject: 'anime',
+              icon: ''
+            },
+            {
+              subject: 'manga',
+              icon: ''
+            },
+            {
+              subject: 'tv shows',
+              icon: ''
+            },
+            {
+              subject: 'reviews',
+              icon: ''
+            },
+            {
+              subject: 'opinions',
+              icon: ''
+            }
+          ],
+          shortDescription: 'This is a short description of the category.',
+          coverImage: 'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+          categoryLink: 'design-portfolio',
+          categoryFilter: 'media', 
+          detailedDescription: 'This is a detailed description of the category.',
+          categoryGallery: [
+            'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+            'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+            'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+            'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+            'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+            'https://source.unsplash.com/abstract-architecture-building-business-263402/'
+          ]
+        },
+      ]
+
+      let exampleEntries = [
+        {
+
+        }
+      ]
        
 
       let latestPosts = []
