@@ -4,8 +4,9 @@ import PostCard from '../cards/postCard'
 import ServiceCard from '../cards/serviceCard'
 import SkillCard from '../cards/skillCard'
 import { Link } from 'react-router-dom';
+import MediaSlider from '../cards/mediaSlider';
 
-export default function Home() {
+export default function Home({getColorSwatch}) {
   
   const [onHoverImage, setOnHoverImage] = useState('https://source.unsplash.com/high-rise-buildings-iSZJxklblkw');
   const [onHoverVideo, setOnHoverVideo] = useState('');
@@ -155,10 +156,276 @@ let examplePosts = [
     ]
   },
   {
-    title: 'Mobile Banking App Design',
-    pageLink: 'mobile-banking-app-design',
+    title: 'Meat Supermarket',
+    pageLink: 'meat-supermarket',
     filter: 'design',
-    tags: ['banking', 'mobile', 'open-banking'],
+    tags: ['supermarket', 'meat', 'grocery'],
+    description: 'This is a description of the post.',
+    summary: 'This is a summary of the post.',
+    coverImage: 'https://source.unsplash.com/photo-of-train-rail-tunnel-13MzGKuJYSw',
+    refHold: "",
+    detailedDescription: 'This is a detailed description of the category.',
+    categoryGallery: [
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/'
+    ]
+  }, 
+  {
+    title: 'Kraftwerk',
+    pageLink: 'kraftwerk',
+    filter: 'design',
+    tags: ['music', 'electronic', 'german'],
+    description: 'This is a description of the post.',
+    summary: 'This is a summary of the post.',
+    coverImage: 'https://source.unsplash.com/photo-of-train-rail-tunnel-13MzGKuJYSw',
+    refHold: "",
+    detailedDescription: 'This is a detailed description of the category.',
+    categoryGallery: [
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/'
+    ]
+  },
+  {
+    title: 'Scrabble',
+    pageLink: 'scrabble',
+    filter: 'design',
+    tags: ['board game', 'word game', 'family game'],
+    description: 'This is a description of the post.',
+    summary: 'This is a summary of the post.',
+    coverImage: 'https://source.unsplash.com/photo-of-train-rail-tunnel-13MzGKuJYSw',
+    refHold: "",
+    detailedDescription: 'This is a detailed description of the category.',
+    categoryGallery: [
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/'
+    ]
+  },
+  {
+    title: 'transportation company',
+    pageLink: 'transportation-company',
+    filter: 'design',
+    tags: ['transport', 'logistics', 'delivery'],
+    description: 'This is a description of the post.',
+    summary: 'This is a summary of the post.',
+    coverImage: 'https://source.unsplash.com/photo-of-train-rail-tunnel-13MzGKuJYSw',
+    refHold: "",
+    detailedDescription: 'This is a detailed description of the category.',
+    categoryGallery: [
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architect\\ure-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/'
+    ]
+  },
+  {
+    title: 'FlagHolsten Grocery Store',
+    pageLink: 'flagholsten-grocery-store',
+    filter: 'design',
+    tags: ['supermarket', 'meat', 'grocery'],
+    description: 'This is a description of the post.',
+    summary: 'This is a summary of the post.',
+    coverImage: 'https://source.unsplash.com/photo-of-train-rail-tunnel-13MzGKuJYSw',
+    refHold: "",
+    detailedDescription: 'This is a detailed description of the category.',
+    categoryGallery: [
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/'
+    ]
+  }, 
+  {
+    title: 'Jenga',
+    pageLink: 'jenga',
+    filter: 'design',
+    tags: ['board game', 'family game', 'party game'],
+    description: 'This is a description of the post.',
+    summary: 'This is a summary of the post.',
+    coverImage: 'https://source.unsplash.com/photo-of-train-rail-tunnel-13MzGKuJYSw',
+    refHold: "",
+    detailedDescription: 'This is a detailed description of the category.',
+    categoryGallery: [
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/'
+    ]
+  },
+  {
+    title: 'Scrabble',
+    pageLink: 'scrabble',
+    filter: 'design',
+    tags: ['board game', 'word game', 'family game'],
+    description: 'This is a description of the post.',
+    summary: 'This is a summary of the post.',
+    coverImage: 'https://source.unsplash.com/photo-of-train-rail-tunnel-13MzGKuJYSw',
+    refHold: "",
+    detailedDescription: 'This is a detailed description of the category.',
+    categoryGallery: [
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/'
+    ]
+  },
+  {
+    title: 'Multimodal Marketplace App Development',
+    pageLink: 'multimodal-marketplace-app-development',
+    filter: 'development',
+    tags: ['marketplace', 'app', 'development', 'multimodal', 'ecommerce'],
+    description: 'This is a description of the post.',
+    summary: 'This is a summary of the post.',
+    coverImage: 'https://source.unsplash.com/photo-of-train-rail-tunnel-13MzGKuJYSw',
+    refHold: "",
+    detailedDescription: 'This is a detailed description of the category.',
+    categoryGallery: [
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/'
+    ]
+  },
+  {
+    title: 'Pomodoro Timer App',
+    pageLink: 'pomodoro-timer-app',
+    filter: 'development',
+    tags: ['productivity', 'app', 'development', 'pomodoro', 'timer'],
+    description: 'This is a description of the post.',
+    summary: 'This is a summary of the post.',
+    coverImage: 'https://source.unsplash.com/photo-of-train-rail-tunnel-13MzGKuJYSw',
+    refHold: "",
+    detailedDescription: 'This is a detailed description of the category.',
+    categoryGallery: [
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/'
+    ]
+  }, 
+  {
+    title: 'Crypto Currency Tracker App',
+    pageLink: 'crypto-currency-tracker-app',
+    filter: 'development',
+    tags: ['crypto', 'currency', 'app', 'development', 'tracker'],
+    description: 'This is a description of the post.',
+    summary: 'This is a summary of the post.',
+    coverImage: 'https://source.unsplash.com/photo-of-train-rail-tunnel-13MzGKuJYSw',
+    refHold: "",
+    detailedDescription: 'This is a detailed description of the category.',
+    categoryGallery: [
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/'
+    ]
+  },
+  {
+    title: 'Stocks Portfolio Tracker App',
+    pageLink: 'stocks-portfolio-tracker-app',
+    filter: 'development',
+    tags: ['stocks', 'portfolio', 'app', 'development', 'tracker'],
+    description: 'This is a description of the post.',
+    summary: 'This is a summary of the post.',
+    coverImage: 'https://source.unsplash.com/photo-of-train-rail-tunnel-13MzGKuJYSw',
+    refHold: "",
+    detailedDescription: 'This is a detailed description of the category.',
+    categoryGallery: [
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/'
+    ]
+  },
+  {
+    title: 'Hospital Administration Dashboard',
+    pageLink: 'hospital-administration-dashboard',
+    filter: 'development',
+    tags: ['hospital', 'administration', 'dashboard', 'app', 'development'],
+    description: 'This is a description of the post.',
+    summary: 'This is a summary of the post.',
+    coverImage: 'https://source.unsplash.com/photo-of-train-rail-tunnel-13MzGKuJYSw',
+    refHold: "",
+    detailedDescription: 'This is a detailed description of the category.',
+    categoryGallery: [
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architect\\ure-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/'
+    ]
+  },
+  {
+    title: 'Budgeting App',
+    pageLink: 'budgeting-app',
+    filter: 'development',
+    tags: ['budgeting', 'finance', 'app', 'development', 'tracker'],
+    description: 'This is a description of the post.',
+    summary: 'This is a summary of the post.',
+    coverImage: 'https://source.unsplash.com/photo-of-train-rail-tunnel-13MzGKuJYSw',
+    refHold: "",
+    detailedDescription: 'This is a detailed description of the category.',
+    categoryGallery: [
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/'
+    ]
+  }, 
+  {
+    title: 'Options Trading App',
+    pageLink: 'options-trading-app',
+    filter: 'development',
+    tags: ['options', 'trading', 'finance', 'app', 'development'],
+    description: 'This is a description of the post.',
+    summary: 'This is a summary of the post.',
+    coverImage: 'https://source.unsplash.com/photo-of-train-rail-tunnel-13MzGKuJYSw',
+    refHold: "",
+    detailedDescription: 'This is a detailed description of the category.',
+    categoryGallery: [
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/',
+      'https://source.unsplash.com/abstract-architecture-building-business-263402/'
+    ]
+  },
+  {
+    title: 'Calorie Tracking App',
+    pageLink: 'calorie-tracking-app',
+    filter: 'development',
+    tags: ['calorie', 'tracking', 'health', 'app', 'development'],
     description: 'This is a description of the post.',
     summary: 'This is a summary of the post.',
     coverImage: 'https://source.unsplash.com/photo-of-train-rail-tunnel-13MzGKuJYSw',
@@ -427,11 +694,6 @@ let examplePosts = [
         },
       ]
 
-      let exampleEntries = [
-        {
-
-        }
-      ]
        
 
       let latestPosts = []
@@ -462,6 +724,10 @@ let examplePosts = [
 
       let skillSet = exampleSkills.map((skill, index) => {
         return <SkillCard key ={index} data={skill} />
+      })
+
+      let categoriesSet = exampleCategories.map((category, index) => {
+        return <MediaSlider examplePosts = {examplePosts} getColorSwatch = {getColorSwatch} key={index} data={category} />
       })
 
       
@@ -526,6 +792,9 @@ let examplePosts = [
                 </Link>
               </button>
             </div>
+           </div>
+           <div className='categoriesSection'>
+                {categoriesSet}
            </div>
         </div>
         

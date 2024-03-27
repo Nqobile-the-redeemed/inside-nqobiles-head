@@ -516,7 +516,7 @@ hr {
   transition: all 0.3s ease-in-out;
 }
 
-#wbb{
+/* #wbb{
   color: var(--primary-scarlet);
   background-color: var(--primary-ivory);
   font-family: 'Neutral-Face';
@@ -526,7 +526,7 @@ hr {
   font-size: 0.9em;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
-}
+} */
 
 .buttonLink {
   font-family: 'Neutral-Face';
@@ -631,4 +631,79 @@ hr {
   gap: 5px;
   width: 100%;
   height: auto;
+}
+
+.mediaSliderContent{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 5px;
+  width: 100%;
+  height: auto;
+}
+
+.mediaSliderOverview{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  min-width: 250px;
+  max-width: 350px;
+  padding: 10px;
+  height: 500px;
+  background-color: var(--primary-ivory);
+}
+
+.categoriesSection{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 25px;
+  width: 100%;
+  height: auto;
+}
+
+.whiteBackgroundMediumTitle{
+  color: var(--primary-scarlet);
+  font-family: "Neue-Metana";
+  font-size: 2.25em;
+  font-weight: bold;
+  text-align: left;
+  max-width: 100%;
+  margin: 0px;
+}
+
+.nonTabItems{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: start;
+  gap: 20px;
+}
+
+.categoryTabHolder {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: start;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.categoryTab{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  padding: 0px 20px;
+  color: var(--primary-black);
+  font-family: "Space-Grotesk";
+  font-size: 0.75em;
+  font-weight: bold;
+  text-transform: uppercase; 
+  border-radius: 20px;
 }
