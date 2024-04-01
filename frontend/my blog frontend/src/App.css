@@ -76,6 +76,7 @@
   --secondary-majorelle: #623CEA;
   --secondary-raspberry: #DB2955;
   --secondary-naples-yellow: #F1DB4B;
+  --primary-ivory-rgb: 255, 255, 240; /* Replace with the RGB values of your color */
   --secondary-perrywinkle: #DAC4F7;
   --tertiary-lighter-backdrop:  rgba(255, 255, 255, 0.10);
   --button-font: "Neutral-Face", Arial, sans-serif;
@@ -654,6 +655,8 @@ hr {
   padding: 10px;
   height: 500px;
   background-color: var(--primary-ivory);
+  flex-basis: auto;
+  flex-shrink: 0;
 }
 
 .categoriesSection{
@@ -662,7 +665,7 @@ hr {
   justify-content: flex-start;
   align-items: stretch;
   gap: 25px;
-  width: 100%;
+  max-width: 100%;
   height: auto;
 }
 
@@ -706,4 +709,48 @@ hr {
   font-weight: bold;
   text-transform: uppercase; 
   border-radius: 20px;
+}
+
+.mediaSliderSlider{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  overflow: hidden;
+  align-items: stretch;
+  gap: 5px;
+  width: 100%;
+  height: auto;
+}
+
+.mediaSliderButton{
+  color: var(--primary-black);
+  background-color: rgba(var(--primary-ivory-rgb), 0.25); /* 0.5 is the opacity, adjust as needed */
+  font-family: 'Neutral-Face';
+  flex-shrink: 0;
+  font-weight: bold;
+  border: none;
+  padding: 0px;
+  font-size: 0.9em;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.mediaSliderPosts{
+  flex-grow: 1;
+  overflow: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 5px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.categoryCardButton{
+  color: var(--primary-black);
+  background-color: transparent;
+  border: none;
+  padding: 0px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
