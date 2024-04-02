@@ -11,7 +11,8 @@ export default function Home({getColorSwatch}) {
   const [onHoverImage, setOnHoverImage] = useState('https://source.unsplash.com/high-rise-buildings-iSZJxklblkw');
   const [onHoverVideo, setOnHoverVideo] = useState('');
   const [videoStyle, setVideoStyle] = useState({
-    display: 'block'
+    display: 'block',
+    background:'transparent'
   });
 
   const style = {
@@ -767,8 +768,8 @@ let examplePosts = [
             </div>
             <div className='serviceImageHolder' style={style}>
               <iframe 
-                width="560" 
-                height="315" 
+                width="0" 
+                height="0" 
                 src={onHoverVideo}
                 title="YouTube video player" 
                 style={videoStyle}

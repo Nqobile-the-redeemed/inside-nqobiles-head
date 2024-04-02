@@ -1,7 +1,10 @@
 import CategoriesTab from "../global-assets/categoriesTab";
 import CategoryCard from "./categoryCard";
+import { useRef } from 'react';
 
-export default function MediaSlider ({data, getColorSwatch, examplePosts}) {
+export default function MediaSlider ({data, getColorSwatch, examplePosts, key}) {
+
+    const sliderRef = useRef();
 
     let categorySelection = examplePosts.filter((post) => post.categoryFilter === data.filter);
 
@@ -11,6 +14,14 @@ export default function MediaSlider ({data, getColorSwatch, examplePosts}) {
         )
     }
     )
+
+    let goLeft = function() {
+        let slider = document.querySelector('.mediaSliderPosts');
+        slider.scrollTo({
+          left: sliderRef.current.scrollLeft + 200,
+          behavior: 'smooth'
+        });
+      }
 
     return (
         <div className="mediaSliderContent">
@@ -37,10 +48,10 @@ export default function MediaSlider ({data, getColorSwatch, examplePosts}) {
                     </defs>
                 </svg>
                 </button>
-                <div className="mediaSliderPosts">
+                <div ref={sliderRef} className="mediaSliderPosts">
                     {selectedPosts}
                 </div>
-                <button className="mediaSliderButton">
+                <button className="mediaSliderButton" onClick={goLeft}>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_722_799)">
                     <path d="M9.99984 6L8.58984 7.41L13.1698 12L8.58984 16.59L9.99984 18L15.9998 12L9.99984 6Z" fill="white"/>

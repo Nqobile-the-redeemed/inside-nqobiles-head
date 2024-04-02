@@ -22,7 +22,9 @@ export default function CategoryCard({ data}) {
         </div>
             <div className="categoryCardBody">
                     <p className="categoryCardTitle">{data.title}</p>  
-                    {categoryTags}
+                    <div className="categoryCardTags">
+                        {categoryTags}
+                    </div>
                 </div>
         </button>
     )
