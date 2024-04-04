@@ -728,8 +728,15 @@ let examplePosts = [
       })
 
       let categoriesSet = exampleCategories.map((category, index) => {
-        return <MediaSlider examplePosts = {examplePosts} getColorSwatch = {getColorSwatch} key={index} data={category} />
+        return <MediaSlider examplePosts = {examplePosts} getColorSwatch = {getColorSwatch} index={index} data={category} />
       })
+
+      let [name, setName] = useState('')
+      let [email, setEmail] = useState('')
+      let [message, setMessage] = useState('')
+      let [subject, setSubject] = useState('')
+      let [formSubmit, setFormSubmit] = useState(false)
+      let [phoneNumber, setPhoneNumber] = useState('')
 
       
 
@@ -796,6 +803,20 @@ let examplePosts = [
            </div>
            <div className='categoriesSection'>
                 {categoriesSet}
+           </div>
+           <div className='contactSection'>
+            <div className='contactOverview overViewSection'>
+              <p className='contactHeading sectionHeading'>Contact</p>
+              <p className='contactOverviewText blackBackgroundBody'>I am available for freelance work. If you would like to work with me, please get in touch.</p>
+            </div>
+            <div className='contactForm'>
+                <form onSubmit={contactFormSubmit} className='contactForm'>
+                  <label>
+                    Name:
+                    <input type="text" value={name} onChange={handleChange} />
+                  </label>
+                </form>
+            </div>
            </div>
         </div>
         
