@@ -1,4 +1,9 @@
 import React, { useState } from 'react';
+import {createRoot} from 'react-dom/client'
+import Markdown from 'react-markdown'
+import ReactMarkdown from 'react-markdown';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { solarizedlight } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import headshotDemo from '../assets/images/headshotDemo.png'
 import PostCard from '../cards/postCard'
 import ServiceCard from '../cards/serviceCard'
@@ -6,6 +11,7 @@ import SkillCard from '../cards/skillCard'
 import { Link } from 'react-router-dom';
 import MediaSlider from '../cards/mediaSlider';
 import EnquiryButton from '../global-assets/enquiryButton';
+import contactSectionOverview from '../textSections/contactSectionOverview.md'
 
 export default function Home({getColorSwatch}) {
   
@@ -748,7 +754,8 @@ let examplePosts = [
         'Web Development',
         'App Development',
         'Project Management',
-        'Content Management Systems',
+        'Wix',
+        'Wordpress',
         'Financial Modeling',
         'Permanent Job Offer',
         'Freelance Work',
@@ -762,6 +769,12 @@ let examplePosts = [
           <EnquiryButton index={index} data={service} />
         )
       })
+
+      const renderers = {
+        code: ({language, value}) => {
+          return <SyntaxHighlighter style={solarizedlight} language={language} children={value} />
+        }
+      }
       
 
     return (
@@ -831,43 +844,55 @@ let examplePosts = [
            <div className='contactSection'>
             <div className='contactOverview overViewSection'>
               <p className='contactHeading sectionHeading'>Contact</p>
-              <p className='contactOverviewText blackBackgroundBody'>I am available for freelance work. If you would like to work with me, please get in touch.</p>
               <div className='contactFormPersonal omegaContact'>
                   <form onSubmit={contactFormSubmit} className='contactForm actualForm'>
-                    <div className='contactInputSet'>
-                      <label className='contactLabel'>
-                        Name
-                        <input className='contactInput' type="text" value={name} onChange={handleChange} />
-                      </label>
-                      <label className='contactLabel'>
-                        Email
-                        <input className='contactInput' type="text" value={email} onChange={handleChange} />
-                      </label>
-                      <label className='contactLabel'>
-                        Phone Number
-                        <input className='contactInput' type="text" value={phoneNumber} onChange={handleChange} />
-                      </label>
-                      <label className='contactLabel'>
-                        Subject
-                        <input className='contactInput' type="text" value={subject} onChange={handleChange} />
-                      </label>
+                    <div className='contactFormHeader'>
+                      <p className='smallerHeader'>Get in touch</p>
+                      <div className='contactInputSet'>
+                        <label className='contactLabel'>
+                          Name
+                          <input className='contactInput' type="text" value={name} onChange={handleChange} />
+                        </label>
+                        <label className='contactLabel'>
+                          Email
+                          <input className='contactInput' type="text" value={email} onChange={handleChange} />
+                        </label>
+                        <label className='contactLabel'>
+                          Phone Number
+                          <input className='contactInput' type="text" value={phoneNumber} onChange={handleChange} />
+                        </label>
+                        <label className='contactLabel'>
+                          Subject
+                          <input className='contactInput' type="text" value={subject} onChange={handleChange} />
+                        </label>
+                      </div>
                     </div>
                     <div className='titleContainer'>
-                      <p>Select your desired service</p>
-                      <div>
+                      <p className='smallerHeader'>Select your desired service</p>
+                      <div className='serviceButtonContainer'>
                         {serviceButtonSet}
                       </div>
                     </div>
-                    <div>
-                      <p>Enter Your enquiry details</p>
+                    <div className='finalSectionHolder'>
+                      <p className='smallerHeader'>Enter Your enquiry details</p>
                       <label className='contactLabel'>
                         Message
-                        <input className='contactInput' type="textarea" value={message} onChange={handleChange} />
+                        <textarea className='contactInput textAreaContactSection' rows='10' value={message} onChange={handleChange} />
                       </label>
                     </div>
-                    <button type='submit'>Submit</button>
+                    <button className='blackBackgroundButton' type='submit'>Submit</button>
                   </form>
               </div>
+            </div>
+            <div className='contactIntroHolder'>
+              <ReactMarkdown renderers={renderers} children={contactSectionOverview} />
+              <p className='contactIntroText'>
+              🌟 Passionate web developer, UX/UI designer, and proficient in major CMS tools. Currently seeking exciting opportunities in the UK, with a keen interest in both freelance gigs and permanent roles. Eager to bring your digital projects to life with innovative designs and seamless user experiences. As a non-UK resident, I require visa sponsorship, but I'm open to discussing how we can navigate this process together. Let's collaborate to create stunning websites, optimize interfaces, and unlock the full potential of your digital presence. Reach out today, and let's embark on a journey of creativity and growth!
+
+                Warm regards,
+
+                Nqobile Blessing Madziba
+              </p>
             </div>
            </div>
         </div>

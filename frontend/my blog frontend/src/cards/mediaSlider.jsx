@@ -45,7 +45,7 @@ export default function MediaSlider ({data, getColorSwatch, examplePosts, index}
                 <div className="nonTabItems">
                     <p className="mediaSliderTitle whiteBackgroundMediumTitle">{data.name}</p>
                     <p className="mediaSliderDescription whiteBackgroundBody">{data.shortDescription}</p>
-                    <button className="mediaSliderButton whiteBackgroundButton">learn More</button>
+                    <button className="whiteBackgroundButton">learn More</button>
                 </div>
                 <div className="categoryTabHolder">
                     {data.tags.map((category, index) => <CategoriesTab getColorSwatch={getColorSwatch} index={index} data={category} />)}
