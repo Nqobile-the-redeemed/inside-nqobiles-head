@@ -5,6 +5,7 @@ import ServiceCard from '../cards/serviceCard'
 import SkillCard from '../cards/skillCard'
 import { Link } from 'react-router-dom';
 import MediaSlider from '../cards/mediaSlider';
+import EnquiryButton from '../global-assets/enquiryButton';
 
 export default function Home({getColorSwatch}) {
   
@@ -738,6 +739,29 @@ let examplePosts = [
       let [formSubmit, setFormSubmit] = useState(false)
       let [phoneNumber, setPhoneNumber] = useState('')
 
+      let contactFormSubmit = (e) => {}
+
+      let handleChange = (e) => {}
+
+      let enquiryServices = [
+        'UX/UI Design',
+        'Web Development',
+        'App Development',
+        'Project Management',
+        'Content Management Systems',
+        'Financial Modeling',
+        'Permanent Job Offer',
+        'Freelance Work',
+        'Consultation',
+        'Staff Augmentation',
+        'Startup Idea'
+      ]
+
+      let serviceButtonSet = enquiryServices.map((service, index) => {
+        return(
+          <EnquiryButton index={index} data={service} />
+        )
+      })
       
 
     return (
@@ -808,14 +832,42 @@ let examplePosts = [
             <div className='contactOverview overViewSection'>
               <p className='contactHeading sectionHeading'>Contact</p>
               <p className='contactOverviewText blackBackgroundBody'>I am available for freelance work. If you would like to work with me, please get in touch.</p>
-            </div>
-            <div className='contactForm'>
-                <form onSubmit={contactFormSubmit} className='contactForm'>
-                  <label>
-                    Name:
-                    <input type="text" value={name} onChange={handleChange} />
-                  </label>
-                </form>
+              <div className='contactFormPersonal omegaContact'>
+                  <form onSubmit={contactFormSubmit} className='contactForm actualForm'>
+                    <div className='contactInputSet'>
+                      <label className='contactLabel'>
+                        Name
+                        <input className='contactInput' type="text" value={name} onChange={handleChange} />
+                      </label>
+                      <label className='contactLabel'>
+                        Email
+                        <input className='contactInput' type="text" value={email} onChange={handleChange} />
+                      </label>
+                      <label className='contactLabel'>
+                        Phone Number
+                        <input className='contactInput' type="text" value={phoneNumber} onChange={handleChange} />
+                      </label>
+                      <label className='contactLabel'>
+                        Subject
+                        <input className='contactInput' type="text" value={subject} onChange={handleChange} />
+                      </label>
+                    </div>
+                    <div className='titleContainer'>
+                      <p>Select your desired service</p>
+                      <div>
+                        {serviceButtonSet}
+                      </div>
+                    </div>
+                    <div>
+                      <p>Enter Your enquiry details</p>
+                      <label className='contactLabel'>
+                        Message
+                        <input className='contactInput' type="textarea" value={message} onChange={handleChange} />
+                      </label>
+                    </div>
+                    <button type='submit'>Submit</button>
+                  </form>
+              </div>
             </div>
            </div>
         </div>
