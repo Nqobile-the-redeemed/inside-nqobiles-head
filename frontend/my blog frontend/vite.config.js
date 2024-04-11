@@ -1,9 +1,15 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import vitePluginMarkdown from 'vite-plugin-markdown'
+import Inspect from 'vite-plugin-inspect'
+import markdownIt from 'vite-plugin-markdown'
+// import markdownPlugin from './plugins/markdownPlugin'
 
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), vitePluginMarkdown()],
+  plugins: [
+    react(), 
+    Inspect(),
+    markdownIt(),
+  ],
 })
