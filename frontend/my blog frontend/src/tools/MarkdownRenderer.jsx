@@ -7,7 +7,7 @@ function MarkdownRenderer({ content }) {
   const htmlContent = content;
 
   return (
-    <div dangerouslySetInnerHTML={{ __html: htmlContent }} />
+    <div className='markDownHolder' dangerouslySetInnerHTML={{ __html: htmlContent }} />
   );
 }
 

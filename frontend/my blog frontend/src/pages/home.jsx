@@ -845,7 +845,11 @@ let examplePosts = [
                 {categoriesSet}
            </div>
            <div className='contactSection'>
-            <div className='contactOverview overViewSection'>
+            <div className='contactIntroHolder'>
+              <MarkdownRenderer className='markDownSection' content={markdownContent} />
+              <img src ={headshotDemo} className='bottomImage'/>
+            </div>
+            <div className='contactOverview'>
               <p className='contactHeading sectionHeading'>Contact</p>
               <div className='contactFormPersonal omegaContact'>
                   <form onSubmit={contactFormSubmit} className='contactForm actualForm'>
@@ -886,9 +890,6 @@ let examplePosts = [
                     <button className='blackBackgroundButton' type='submit'>Submit</button>
                   </form>
               </div>
-            </div>
-            <div className='contactIntroHolder'>
-              <MarkdownRenderer content={markdownContent} />
             </div>
            </div>
         </div>

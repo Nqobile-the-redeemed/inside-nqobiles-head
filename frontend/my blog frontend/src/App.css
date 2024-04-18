@@ -952,12 +952,16 @@ hr {
   justify-content: flex-start;
   align-items: flex-start;
   gap: 50px;
-  width: 70%;
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--primary-ivory);
+  padding: 5px;
+  box-sizing: border-box;
 }
 
 .contactSection{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   gap: 5px;
@@ -966,13 +970,15 @@ hr {
 
 .contactIntroHolder{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: flex-start;
   background-color: var(--primary-ivory);
   align-items: flex-start;
+  padding: 20px;
   gap: 50px;
-  width: 30%;
+  width: 100%;
   height: 100%;
+  box-sizing: border-box;
 }
 
 .contactIntroText{
@@ -982,4 +988,25 @@ hr {
   text-align: left;
   max-width: 100%;
   margin: 0px;
+}
+
+.markDownHolder p {
+  color: var(--primary-black);
+  font-family: "Space-Grotesk";
+  font-size: 1em;
+  text-align: left;
+  width: 100%;
+}
+
+.markDownHolder h1 {
+  color: var(--primary-black);
+  font-family: "Neutral-Face";
+  font-size: 1.5em;
+  text-align: left;
+}
+
+.bottomImage {
+  width: 30%;
+  height: auto;
+  object-fit: cover;
 }
