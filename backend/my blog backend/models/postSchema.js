@@ -7,39 +7,32 @@ const postsSchema = new mongoose.Schema({
     },
     pageLink: {
         type: String,
-        required: true
     },
     tags: {
         type: [String],
-        required: true
     },
     description: {
         type: String,
-        required: true
     },
     summary: {
         type: String,
-        required: true
     },
     coverImage: {
         type: String,
-        required: true
     },
     refHold:{
         type: String
     },
     detailedDescription: {
         type: String,
-        required: true
     },
     categoryGallery: {
-        type: [String],
-        required: true
+        type: [String]
     },
-    categoryFilter: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Post'
-    }
+    // categoryFilter: {
+    //     type: mongoose.Schema.Types.ObjectId,
+    //     ref: 'Category'
+    // }
 }, { timestamps: true });
 
 const Posts = mongoose.model('Posts', postsSchema);

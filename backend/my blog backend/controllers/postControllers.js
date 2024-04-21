@@ -24,22 +24,43 @@ const getPost = async (req, res) => {
 
 
 // Create a new post
+// const createPost = async (req, res) => {
+//     try {
+//         const post = new Posts({
+//             title: req.body.title,
+//             pageLink: req.body.pageLink,
+//             tags: req.body.tags,
+//             description: req.body.description,
+//             summary: req.body.summary,
+//             coverImage: req.body.coverImage,
+//             refHold: req.body.refHold,
+//             detailedDescription: req.body.detailedDescription,
+//             categoryGallery: req.body.categoryGallery,
+//             categoryFilter: req.body.categoryFilter
+//         });
+//         await post.save();
+//         res.json({ message: "Post created successfully", post: post  });
+//     } catch (err) {
+//         res.status(500).json({ error: err.message });
+//     }
+// };
+
 const createPost = async (req, res) => {
-    try {
-        const post = new Posts({
-            title: req.body.title,
-            pageLink: req.body.pageLink,
-            tags: req.body.tags,
-            description: req.body.description,
-            summary: req.body.summary,
-            coverImage: req.body.coverImage,
-            refHold: req.body.refHold,
-            detailedDescription: req.body.detailedDescription,
-            categoryGallery: req.body.categoryGallery,
-            categoryFilter: req.body.categoryFilter
+    const { title, pageLink, tags, description, summary, coverImage, refHold, detailedDescription, categoryGallery, categoryFilter } = req.body;
+    try{
+        const post = await Posts.create({
+            title,
+            pageLink,
+            tags,
+            description,
+            summary,
+            coverImage,
+            refHold,
+            detailedDescription,
+            categoryGallery,
+            categoryFilter
         });
-        await post.save();
-        res.json({ message: "Post created successfully" });
+        res.status(201).json(post);
     } catch (err) {
         res.status(500).json({ error: err.message });
     }
