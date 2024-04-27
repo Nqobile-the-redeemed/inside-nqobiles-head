@@ -12,6 +12,15 @@ const getPosts = async (req, res) => {
     }
 };
 
+// Get 4 latest posts
+const getTopFourPosts = async (req, res) => {
+    try {
+        const posts = await Posts.find().sort({ createdAt: -1 }).limit(4);
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
+}
+
 // Get a single post
 const getPost = async (req, res) => {
     try {
@@ -105,6 +114,7 @@ module.exports = {
     getPosts,
     getPost,
     createPost,
+    getTopFourPosts,
     updatePost,
     deletePost
   };

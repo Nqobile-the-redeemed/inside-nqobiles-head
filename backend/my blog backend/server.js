@@ -13,12 +13,11 @@ const app = express();
 
 
 // middleware
-
-
 app.use((req, res, next) => {
   console.log(req.path, req.method, req.query, req.body, req.params)
   next();
 });
+
 
 // Serve static files from the 'imageUploads' folder
 app.use('/api/imageUploads', express.static(path.join(__dirname, 'imageUploads')));
