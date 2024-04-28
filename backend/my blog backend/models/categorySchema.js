@@ -24,7 +24,7 @@ const categoriesSchema = new mongoose.Schema({
     categoryLink: {
         type: String,
     },
-    Posts: {
+    posts: {
         type: [
             {
             type: mongoose.Schema.Types.ObjectId,

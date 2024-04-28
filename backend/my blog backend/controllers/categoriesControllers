@@ -1,4 +1,5 @@
 const Categories = require("../models/categorySchema");
+const Posts = require("../models/postSchema");
 const fs = require('fs');
 const path = require('path');
 
@@ -22,11 +23,25 @@ const getCategory = async (req, res) => {
 };
 
 const createCategory = async (req, res) => {
-  const category = req.body;
-  const newCategory = new Categories(category);
+  const {title, tags, shortDescription, coverImage, categoryLink, posts, detailedDescription, categoryGallery} = req.body;
   try {
-    await newCategory.save();
-    res.status(201).json(newCategory);
+		// Fetch post documents based on provided IDs
+    const posts = await Posts.find({ _id: { $in: postIds } });
+    
+    // Map the post documents to an array of post IDs
+    const postIds = posts.map(post => post._id);
+        
+	  const category = await Categories.create({
+            title,
+            tags,
+            shortDescription,
+            coverImage,
+            categoryLink,
+            posts: postIds, // Use the array of post IDs here
+            detailedDescription,
+            categoryGallery
+        });
+    res.status(201).json(category);
   } catch (error) {
     res.status(409).json({ message: error.message });
   }
