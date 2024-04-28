@@ -29,12 +29,10 @@ const postsSchema = new mongoose.Schema({
     categoryGallery: {
         type: [String]
     },
-    // categoryFilter: {
-    //     type: mongoose.Schema.Types.ObjectId,
-    //     ref: 'Category'
-    // }
+    categoryFilter: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Category'
+    }
 }, { timestamps: true });
 
 const Posts = mongoose.model('Posts', postsSchema);
-
-module.exports = Posts;

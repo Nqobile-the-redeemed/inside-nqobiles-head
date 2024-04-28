@@ -16,6 +16,7 @@ const getPosts = async (req, res) => {
 const getTopFourPosts = async (req, res) => {
     try {
         const posts = await Posts.find().sort({ createdAt: -1 }).limit(4);
+        res.json(posts);
     } catch (err) {
         res.status(500).json({ error: err.message });
     }
