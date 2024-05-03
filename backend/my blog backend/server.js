@@ -2,6 +2,7 @@ require('dotenv').config();
 
 const express = require('express');
 const postRoutes = require('./routes/postRoutes');
+const categoryRoutes = require('./routes/categoryRoutes');
 const fileUpload = require('express-fileupload');
 const path = require('path');
 const mongoose = require('mongoose');
@@ -35,6 +36,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // Use API Routes
 app.use('/api/posts', postRoutes);
+app.use('/api/categories', categoryRoutes);
 
 
 // Connect to MongoDB

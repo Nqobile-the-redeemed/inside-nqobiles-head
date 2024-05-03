@@ -26,10 +26,12 @@ const createCategory = async (req, res) => {
   const {title, tags, shortDescription, coverImage, categoryLink, posts, detailedDescription, categoryGallery} = req.body;
   try {
 		// Fetch post documents based on provided IDs
-    const posts = await Posts.find({ _id: { $in: postIds } });
+    const foundPosts = await Posts.find({ _id: { $in: posts } });
+
+    console.log(foundPosts);
     
     // Map the post documents to an array of post IDs
-    const postIds = posts.map(post => post._id);
+    const postIds = foundPosts.map(post => post._id);
         
 	  const category = await Categories.create({
             title,
@@ -80,3 +82,4 @@ module.exports = {
   updateCategory,
   deleteCategory,
 };
+

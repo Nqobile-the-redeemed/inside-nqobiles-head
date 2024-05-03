@@ -1,5 +1,3 @@
-module.exports = Posts;
-
 const mongoose = require("mongoose");
 
 const tagSchema = new mongoose.Schema({
@@ -42,4 +40,4 @@ const categoriesSchema = new mongoose.Schema({
 
 const Categories = mongoose.model('Categories', categoriesSchema);
 
-module.exports = Posts;
+module.exports = Categories;
